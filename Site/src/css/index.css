@@ -1,3 +1,5 @@
+@import './header.css';
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,32 +8,28 @@
 
 html{
     font-size: 62,5%;
+    
 }
 
-header{
-    background-color: #1d1e20;
-    width: 100%;
-    height: 6vh;
+#introduction{
+    background-color: #1e1b24;
     display: flex;
-    justify-content: space-between;  
-    color: white;
-}
-
-nav ul{
-    display: flex;
-    height: 100%;
-}
-
-nav ul li{
-    text-decoration: none;
-    text-align: center;
-    list-style: none;
-    height: 100%;
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-nav ul li button{
-    height: 100%;
-    padding: 0 1rem;
+#introduction img{
+    width: 100%;
+    opacity: 60%;
 }
+
+#title{
+    position: absolute;
+    z-index: 1;
+    color: white;
+}
+
+#title h2{
+    font-size: 56px;
+}
+
