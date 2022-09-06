@@ -1,4 +1,4 @@
-section{
+section {
     background-color: #00000088;
     width: 100%;
     height: 100vh;
@@ -8,19 +8,19 @@ section{
     flex-direction: column;
 }
 
-.first strong{
+.first strong {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     font-size: 36px;
 }
 
-.first p{
+.first p {
     color: white;
     border-top: 1px solid white;
 }
 
-.first img{
+.first img {
     position: absolute;
     height: 100vh;
     z-index: -5;
@@ -28,7 +28,7 @@ section{
     clip: rect(0px, 100%, 100vh, 0px);
 }
 
-.second .button{
+.second Button {
     background-color: #ffffff10;
     border-radius: 30px;
     width: 188px;
@@ -38,32 +38,67 @@ section{
     justify-content: center;
     align-items: center;
     margin-block: 24px;
+    border: none;
 }
 
-.second .button svg{
+.second Button svg {
     width: 92px;
     height: 92px;
 }
 
-.second .button p{
+.second Button p {
     padding-top: 12px;
     color: white;
     font-size: 24px;
 }
 
-.second p{
+.activated {
+    transition: 0.5s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: #ffffff10;
+}
+
+.activated svg {
+    width: 92px;
+    height: 92px;
+}
+
+.activated button {
+    background-color: #ffffff00;
+    text-align: center;
+    font-size: 24px;
+}
+
+.footer {
+    height: fit-content;
+}
+
+.footer p {
     color: #aaaaaa;
     margin-bottom: 12px;
     font-size: 12px;
 }
 
-@media (max-width > 700px) {
-    section{
+@media (min-width: 700px) {
+    .second {
         background-color: #00000088;
         width: 100%;
         height: 100vh;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        flex-direction: row;
+    }
+
+    main p {
+        color: #aaaaaa;
+        margin-bottom: 12px;
+        font-size: 12px;
+        display: block;
     }
 }
