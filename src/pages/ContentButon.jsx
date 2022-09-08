@@ -3,16 +3,17 @@ import { useState } from "react";
 
 export default props => {
 
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
 
     const content = (
-        <div className="pop-up" onClick={() => setActive(!active)}>
-            <div className="header">
-                <p>{props.text}</p>
-                {props.svg}
-            </div>
-            <div className="body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum porro quod distinctio doloribus accusantium iure vel adipisci voluptatibus, necessitatibus velit asperiores quos temporibus reprehenderit ad, natus quidem ex facilis eum?</p>
+        <div className="back" onClick={() => setActive(!active)}>
+            <div className="pop-up">
+                <div className="header"> 
+                    <p>{props.svg} {props.text}</p>
+                </div>
+                <div className="body">
+                    {props.content}
+                </div>
             </div>
         </div>
     )
