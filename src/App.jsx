@@ -18,9 +18,9 @@ export default props => {
   const navbar = (
     <nav>
       <ul>
-        <li><Link className='nav-link' to='/'>Sobre</Link></li>
-        <li><Link className='nav-link' to='/Criacao'>Criação</Link></li>
-        <li><Link className='nav-link' to='/Integrantes'>Integrantes</Link></li>
+        <li><Link onClick={() => showNavbar()} className='nav-link' to='/'>Sobre</Link></li>
+        <li><Link onClick={() => showNavbar()} className='nav-link' to='/Criacao'>Criação</Link></li>
+        <li><Link onClick={() => showNavbar()} className='nav-link' to='/Integrantes'>Integrantes</Link></li>
       </ul>
     </nav>
   )

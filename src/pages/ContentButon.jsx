@@ -3,30 +3,27 @@ import { useState } from "react";
 
 export default props => {
 
-    const [active, setActive] = useState(false)
-    const deactivated = (
-        <button onClick={() => setActive(true)}>
-            {props.svg}
-            <p>{props.text}</p>
-        </button>
-    )
+    const [active, setActive] = useState(true)
 
     const content = (
-        <div className={active == true ? 'activated' : false}>
-            <button onClick={() => setActive(!active)}>
-                {props.svg}
+        <div className="pop-up" onClick={() => setActive(!active)}>
+            <div className="header">
                 <p>{props.text}</p>
-            </button>
-            <div className="body" style={active == true ? {display: 'block'} : {display: 'none'}}>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam cum nostrum mollitia, dolores reprehenderit inventore. Nobis dolores, error dignissimos eaque, itaque praesentium exercitationem eos, nostrum sapiente harum excepturi. Enim, sint.</p>
+                {props.svg}
             </div>
-
+            <div className="body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum porro quod distinctio doloribus accusantium iure vel adipisci voluptatibus, necessitatibus velit asperiores quos temporibus reprehenderit ad, natus quidem ex facilis eum?</p>
+            </div>
         </div>
     )
 
     return (
-        <>
-            {content}
-        </>
+        <div className='card'>
+            <button onClick={() => setActive(!active)}>
+                {props.svg}
+                <p>{props.text}</p>
+            </button>
+            {active == true ? content : false}
+        </div>
     )
 }
