@@ -149,7 +149,15 @@ section {
     main p {
         color: #aaaaaa;
         margin-bottom: 12px;
-        font-size: 12px;
+        font-size: 24px;
         display: block;
+    }
+
+    .pop-up{
+        font-size: 32px;
+    }
+
+    .card{
+        box-shadow: 3px 3px 3px solid black;
     }
 }

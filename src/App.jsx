@@ -13,7 +13,7 @@ import Integrantes from './pages/Integrantes';
 
 export default props => {
 
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(window.innerWidth > 700 ? true : false)
 
   const navbar = (
     <nav>
@@ -26,7 +26,11 @@ export default props => {
   )
 
   function showNavbar() {
-    setNav(!nav)
+    if(window.innerWidth > 700){
+      setNav(true)
+    }else{
+      setNav(!nav)
+    }
   }
 
 
@@ -35,11 +39,11 @@ export default props => {
       <Router>
         <header>
           <h1>FALL</h1>
-          <button onClick={() => showNavbar()}>☰</button>
+          {window.innerWidth > 700 ? false : <button onClick={() => showNavbar()}>☰</button>}
           {nav == true ? navbar : false}
         </header>
         <Routes>
-          <Route path='/' element={<Sobre />} />
+          <Route path='/' element={<Sobre />}  />
           <Route path='/Criacao' element={<Criação />} />
           <Route path='/Integrantes' element={<Integrantes />} />
         </Routes>

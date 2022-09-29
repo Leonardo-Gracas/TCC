@@ -30,14 +30,14 @@ export default props => {
                     svg={<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="128" y1="24" x2="128" y2="48" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="128" y1="208" x2="128" y2="232" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><path d="M184,88a40,40,0,0,0-40-40H108a40,40,0,0,0,0,80h44a40,40,0,0,1,0,80H104a40,40,0,0,1-40-40" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>}
                     text={'Custo'}
                     content={(
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum fuga soluta mollitia, officiis eos neque eveniet repellendus sit, facilis hic qui debitis nisi voluptatibus magnam, odio expedita? Libero, voluptatibus?</p>
+                        <p>Os gastos foram um pouco maiores do que o esperado por conta de que tivemos que repor algumas peças que não funcionavam. Mas o valor total de projeto ficou em torno de R$120,00</p>
                     )}
                 />
                 <Button
                     svg={<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="88" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><line x1="128" y1="20" x2="128" y2="60" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="20" y1="128" x2="60" y2="128" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="128" y1="236" x2="128" y2="196" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="236" y1="128" x2="196" y2="128" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><circle cx="128" cy="128" r="32" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle></svg>}
                     text={'Propósito'}
                     content={(
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum fuga soluta mollitia, officiis eos neque eveniet repellendus sit, facilis hic qui debitis nisi voluptatibus magnam, odio expedita? Libero, voluptatibus?</p>
+                        <p>A ideia é de criar algo pra ajudar engenheiros a fazer trabalhos mais precisos. O robo indicaria as medidas de distância na planta criada e assim facilitaria o processo de construção ou reforma de algum lugar.</p>
                     )}
                 />
             </section>

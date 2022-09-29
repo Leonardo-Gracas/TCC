@@ -1,4 +1,4 @@
-header{
+header {
   background: #2f2f2f;
   height: 8vh;
   width: 100vw;
@@ -9,13 +9,13 @@ header{
   padding: 12px;
 }
 
-header h1{
+header h1 {
   color: white;
   font-size: 32px;
   position: absolute;
 }
 
-header button{
+header button {
   position: absolute;
   right: 12px;
   background-color: #ffffff00;
@@ -27,11 +27,11 @@ header button{
   height: 45px;
 }
 
-header button:hover{
+header button:hover {
   background-color: #00000020;
 }
 
-nav{
+nav {
   transition: 0.2s ease-in;
   transform: translateY(calc(50% + 3vh));
   background-color: #2f2f2f;
@@ -42,11 +42,11 @@ nav{
   z-index: -1;
 }
 
-nav li{
+nav li {
   list-style: none;
 }
 
-.nav-link{
+.nav-link {
   text-decoration: none;
   color: white;
   display: flex;
@@ -54,4 +54,37 @@ nav li{
   justify-content: center;
   align-items: center;
   height: calc(100vh/3 - 5vh);
+}
+
+@media (min-width: 700px) {
+  header{
+    justify-content: space-between;
+  }
+
+  header h1{
+    position: initial;
+  }
+
+  nav {
+    transform: none;
+    padding: 0;
+    margin: 0;
+    min-width: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link {
+    flex-direction: row;
+    width: fit-content;
+    height: 30px;
+    width: 220px;
+    justify-content: center;
+  }
+
+  nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
