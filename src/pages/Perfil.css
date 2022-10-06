@@ -63,6 +63,7 @@
     .perfil{
         width: 400px;
         justify-content: flex-start;
+        margin-block: 4px;
     }
 
     .perfil .text{

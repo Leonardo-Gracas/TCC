@@ -40,6 +40,7 @@ section {
     padding-block: 18px;
     display: flex;
     flex-wrap: wrap;
+    height: fit-content;
 }
 
 .second Button {
@@ -71,15 +72,16 @@ section {
     height: 100vh;
     background-color: #1f1f1f40;
     position: fixed;
+    display: flex;
+    align-items: center;
     top: 0;
     left: 0;
 }
 
 .pop-up {
     color: white;
-    background-color: #4f4f4f;
-    position: fixed;
-    margin: 16px;
+    background-color: hsl(0, 0%, 31%);
+    margin: 0 0;
     top: 30vh;
     left: 0;
     border-radius: 25px;
@@ -167,6 +169,8 @@ section {
 
     .pop-up{
         font-size: 32px;
+        width: 600px;
+        margin: 0 auto;
     }
 
     .card{
