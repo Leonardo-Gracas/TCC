@@ -10,10 +10,11 @@ section {
 }
 
 .first {
-    background-image: url('../imgs/walle.jpg');
+    background-image: url('../imgs/Fall.jpeg');
     background-blend-mode: darken;
-    background-position: 50%;
+    background-position-x: 50%;
     background-size: 100vh;
+    background-position-y: 30%;
 }
 
 .first strong {
