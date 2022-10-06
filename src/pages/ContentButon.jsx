@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 export default props => {
@@ -8,7 +9,7 @@ export default props => {
     const content = (
         <div className="back" onClick={() => setActive(!active)}>
             <div className="pop-up">
-                <div className="header"> 
+                <div className="header">
                     <p>{props.svg} {props.text}</p>
                 </div>
                 <div className="body">
@@ -19,12 +20,15 @@ export default props => {
     )
 
     return (
-        <div className='card'>
-            <button onClick={() => setActive(!active)}>
-                {props.svg}
-                <p>{props.text}</p>
-            </button>
+        <>
+            <div className='card'>
+                <button onClick={() => setActive(!active)}>
+                    {props.svg}
+                    <p>{props.text}</p>
+                </button>
+                
+            </div>
             {active == true ? content : false}
-        </div>
+        </>
     )
 }

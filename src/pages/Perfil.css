@@ -1,0 +1,71 @@
+.perfil{
+    background-color: #ffffff10;
+    width: 90vw;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 18px;
+    margin-block: 18px;
+}
+
+.perfil strong{ 
+    font-size: 22px;
+    padding-bottom: 8px;
+}
+
+.perfil .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perfil p{
+    width: 200px;
+}
+
+.foto {
+    background-size: 120px;
+    width: 120px;
+    height: 120px;
+    border-radius: 18px;
+}
+
+#Leo{
+    background-image: url('../imgs/Leo.jpeg');
+}
+
+#Felipe{
+    background-image: url('../imgs/Felipe.jpeg');
+    background-position-y: -12px;
+}
+
+#Kadri{
+    background-image: url('../imgs/Kadri.jpeg');
+    background-size: 130px;
+    background-position-y: -18px;
+    background-position-x: -4px;
+}
+
+#Lucas{
+    background-image: url('../imgs/Lucas.jpeg');
+    background-position-y: -32px;
+}
+
+#Elon{
+    background-image: url('../imgs/Elon.jpg');
+    background-size: 210px;
+    background-position-x: -42px;
+}
+
+@media (min-width: 700px){
+    .perfil{
+        width: 400px;
+        justify-content: flex-start;
+    }
+
+    .perfil .text{
+        padding-left: 28px;
+    }
+}

@@ -1,0 +1,78 @@
+#draw .pointb{
+    background-color: black;
+    width: 1px;
+    height: 1px;
+}
+
+#draw .points{
+    background-color: rgb(128, 128, 128);
+    width: 1px;
+    height: 1px;
+}
+
+#draw .pointw{
+    background-color: white;
+    width: 1px;
+    height: 1px;
+}
+
+#draw .line{
+    display: flex;
+    flex-direction: row;
+}
+
+#draw{
+    display: flex;
+    flex: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map{
+    width: fit-content;
+    border: 2px dotted white;
+    scroll-behavior: auto;
+}
+
+.Mapping{
+    background-color: #ffffff10;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.Mapping p{
+    font-size: 28px;
+    color: white;
+    margin-block: 32px 12px;
+}
+
+.insert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.insert input{
+    width: 200px;
+    height: 28px;
+}
+
+.insert button{
+    width: 200px;
+    border: 1px solid black;
+    margin-block: 8px;
+    padding: 6px;
+    background-color: darkslategray;
+    
+}
+
+@media (min-width: 700px) {
+    .Mapping{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+}

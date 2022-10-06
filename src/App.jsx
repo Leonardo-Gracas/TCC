@@ -10,6 +10,7 @@ import './App.css';
 import Sobre from './pages/Sobre'
 import Criação from './pages/Criação'
 import Integrantes from './pages/Integrantes';
+import Software from './pages/Software';
 
 export default props => {
 
@@ -21,6 +22,7 @@ export default props => {
         <li><Link onClick={() => showNavbar()} className='nav-link' to='/'>Sobre</Link></li>
         <li><Link onClick={() => showNavbar()} className='nav-link' to='/Criacao'>Criação</Link></li>
         <li><Link onClick={() => showNavbar()} className='nav-link' to='/Integrantes'>Integrantes</Link></li>
+        <li><Link onClick={() => showNavbar()} className='nav-link' to='/Software'>Software</Link></li>
       </ul>
     </nav>
   )
@@ -39,13 +41,14 @@ export default props => {
       <Router>
         <header>
           <h1>FALL</h1>
-          {window.innerWidth > 700 ? false : <button onClick={() => showNavbar()}>☰</button>}
+          <button onClick={() => showNavbar()} id="bar-button">☰</button>
           {nav == true ? navbar : false}
         </header>
         <Routes>
           <Route path='/' element={<Sobre />}  />
           <Route path='/Criacao' element={<Criação />} />
           <Route path='/Integrantes' element={<Integrantes />} />
+          <Route path='/Software' element={<Software />} />
         </Routes>
       </Router>
     </div>
