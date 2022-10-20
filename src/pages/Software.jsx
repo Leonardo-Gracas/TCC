@@ -6,9 +6,9 @@ import './css/Software.css'
 export default props => {
 
     function readCode() {
-        let vetor = new Array(512)
-        for (let i = 0; i < 512; i++) {
-            vetor[i] = new Array(512)
+        let vetor = new Array(256)
+        for (let i = 0; i < 256; i++) {
+            vetor[i] = new Array(256)
             vetor[i].fill(0)
         }
 
@@ -38,29 +38,27 @@ export default props => {
         for (let i = 0; i < 180; i++) {
             let hip = hips[i]
 
-            if (hip > 30) {
+            if (hip > 15) {
                 hip = 0
             }
 
             if (hip > 4) {
-                let ca = Math.floor(Math.sin(Math.PI / (180 / (i + 180))) * hip * 4);
-                let co = Math.floor(Math.cos(Math.PI / (180 / (i + 180))) * hip * 4);
-                if (Math.abs(ca) <= 256) {
-                    if (Math.abs(co) <= 256) {
-                        vetor[ca + 256][co + 256] = 1
+                let ca = Math.floor(Math.sin(Math.PI / (180 / (i + 180))) * hip * 2);
+                let co = Math.floor(Math.cos(Math.PI / (180 / (i + 180))) * hip * 2);
+                if (Math.abs(ca) <= 128) {
+                    if (Math.abs(co) <= 128) {
+                        vetor[ca + 128][co + 128] = 1
 
-                        if (vetor[ca + 256][co + 256 + 1] == 0) {
-                            vetor[ca + 256][co + 256 + 1] = 2
+
+
+                        for(let p = -1; p <= 1; p++){
+                            for(let q = -1; q <= 1; q++){
+                                if (vetor[ca + 128 + p][co + 128 + q] == 0) {
+                                    vetor[ca + 128 + p][co + 128 + q] = 2
+                                }
+                            }
                         }
-                        if (vetor[ca + 256][co + 256 - 1] == 0) {
-                            vetor[ca + 256][co + 256 - 1] = 2
-                        }
-                        if (vetor[ca + 256 + 1][co + 256] == 0) {
-                            vetor[ca + 256 + 1][co + 256] = 2
-                        }
-                        if (vetor[ca + 256 - 1][co + 256] == 0) {
-                            vetor[ca + 256 - 1][co + 256] = 2
-                        }
+                        
                     }
                 }
 
