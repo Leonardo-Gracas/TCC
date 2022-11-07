@@ -1,0 +1,65 @@
+.card{
+    width: 100%;
+    background-color: #ffffff07;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+    margin-block: 8px;
+    border-radius: 14px;
+}
+
+.name{
+    display: flex;
+    width: 50%;
+    padding-left: 4vw;
+    flex-direction: row;
+}
+
+.name svg{
+    width: 88px;
+    margin: 4px;
+}
+
+.name h1{
+    font-size: 42px;
+    align-self: center;
+}
+
+.Body {
+    display: flex;
+    width: 50%;
+    padding-right: 8vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .card{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .Body, .name{
+        width: auto;
+        height: auto;
+        padding: 12px;
+    }
+
+    .Body{
+        font-size: 18px;
+    }
+
+    .name h1{
+        height: fit-content;
+    }
+
+    .name svg{
+        width: 60px;
+        height: 98px;
+    }
+}

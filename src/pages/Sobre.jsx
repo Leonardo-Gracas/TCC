@@ -17,12 +17,12 @@ export default props => {
                     text={'Peças'}
                     content={(
                         <>
-                            <p>Utilizamos uma quantidade de peças pensada para não gastarmos demais com a construção do Trabalho de Conclusão de Curso</p>
+                            <p>Evitamos o excesso de peças para nao gastarmos muito com o projeto. Então, utilizamos somente o estritamente necessário</p>
                             <li><strong>1</strong> Placa ARDUINO</li>
                             <li><strong>1</strong> Sensor Ultrassônico HS04</li>
                             <li><strong>1</strong> Ponte H</li>
                             <li><strong>2</strong> Motores</li>
-                            <li><strong>1</strong> Rodas</li>
+                            <li><strong>2</strong> Rodas</li>
                         </>
                     )}
                 />

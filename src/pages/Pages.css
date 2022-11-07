@@ -2,7 +2,6 @@ section {
     background-color: #2f2f2f88;
     width: 100%;
     min-height: 100vh;
-    max-height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,80 +43,6 @@ section {
     height: fit-content;
 }
 
-.second Button {
-    background-color: #ffffff10;
-    border-radius: 30px;
-    width: 188px;
-    height: 178px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-block: 22px;
-    border: none;
-}
-
-.second Button svg {
-    width: 92px;
-    height: 92px;
-}
-
-.second Button p {
-    padding-top: 12px;
-    color: white;
-    font-size: 24px;
-}
-
-.back {
-    width: 100vw;
-    height: 100vh;
-    background-color: #1f1f1f40;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    top: 0;
-    left: 0;
-}
-
-.pop-up {
-    color: white;
-    background-color: hsl(0, 0%, 31%);
-    margin: 0 0;
-    top: 30vh;
-    left: 0;
-    border-radius: 25px;
-}
-
-.pop-up .body {
-    background-color: #4f4f4fef;
-    padding: 22px 8px;
-    text-align: center;
-    border-radius: 25px;
-}
-
-.pop-up .header {
-    background-color: #1f1f1f;
-    display: flex;
-    flex-direction: row;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-block: 8px;
-    border-radius: 25px 25px 0 0;
-}
-
-.pop-up .header p {
-    display: flex;
-    align-items: center;
-}
-
-.pop-up .header svg {
-    width: 24px;
-    height: 24px;
-    margin-inline: 8px;
-}
-
 .footer {
     min-height: initial;
     height: fit-content;
@@ -154,27 +79,10 @@ section {
     .second {
         background-color: #00000088;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: row;
-    }
-
-    main p {
-        color: #aaaaaa;
-        margin-bottom: 12px;
-        font-size: 24px;
-        display: block;
-    }
-
-    .pop-up{
-        font-size: 32px;
-        width: 600px;
-        margin: 0 auto;
-    }
-
-    .card{
-        box-shadow: 3px 3px 3px solid black;
     }
 }
