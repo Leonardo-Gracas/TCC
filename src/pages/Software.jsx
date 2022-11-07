@@ -28,41 +28,52 @@ export default props => {
                 for (let a = 1; a < width; a++) {
                     part += code[lastchar + a]
                 }
-                part = Number(part)
+                if (!isNaN(part)) {
+                    part = Number(part)
+                }
+                if (part == '+') { console.log(part) }
                 hips[index] = part
                 lastchar = nextchar
             }
         }
 
+        let ang = -1
+        let y = 148
+
         //calcula as coordenadas dos pontos de colisão baseado em Ângulo e distância
-        for (let i = 0; i < 180; i++) {
+        for (let i = 0; i < hips.length; i++) {
             let hip = hips[i]
+            ang++
 
-            if (hip > 15) {
-                hip = 0
-            }
-
-            if (hip > 4) {
-                let ca = Math.floor(Math.sin(Math.PI / (180 / (i + 180))) * hip * 2);
-                let co = Math.floor(Math.cos(Math.PI / (180 / (i + 180))) * hip * 2);
-                if (Math.abs(ca) <= 128) {
-                    if (Math.abs(co) <= 128) {
-                        vetor[ca + 128][co + 128] = 1
-
-
-
-                        for(let p = -1; p <= 1; p++){
-                            for(let q = -1; q <= 1; q++){
-                                if (vetor[ca + 128 + p][co + 128 + q] == 0) {
-                                    vetor[ca + 128 + p][co + 128 + q] = 2
-                                }
-                            }
-                        }
-                        
-                    }
+            if (hip == '+') {
+                y -= 15
+                ang = -1
+            } else {
+                if (hip > 15) {
+                    hip = 0
                 }
 
+                if (hip > 4) {
+                    let ca = Math.floor(Math.sin(Math.PI / (180 / (ang + 180))) * hip * 2);
+                    let co = Math.floor(Math.cos(Math.PI / (180 / (ang + 180))) * hip * 2);
+                    if (Math.abs(ca) <= 128) {
+                        if (Math.abs(co) <= 128) {
+                            vetor[ca + y][co + 128] = 1
+
+                            for (let p = -1; p <= 1; p++) {
+                                for (let q = -1; q <= 1; q++) {
+                                    if (vetor[ca + y + p][co + 128 + q] == 0) {
+                                        vetor[ca + y + p][co + 128 + q] = 2
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                }
             }
+
 
 
         }
